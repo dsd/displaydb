@@ -1,0 +1,60 @@
+Monitor EDID & metadata database.
+Intended to gather information around home/consumer displays, with a special
+interest on overscan behaviour.
+
+Useful for analysis, such as:
+	What EDID versions are most common?
+	How widespread is GTF support?
+	How widespread is CVT support?
+	How many TVs have reasonable overscan behaviour for input from a PC?
+
+
+EDID FILENAME FORMAT
+
+The EDID filename should be based around the vendor and model number
+visible on the product or product materials. Try to keep it short and
+technical, for example the Sony Bravia TV123 would just be "Sony-TV123".
+
+You then end it with an extension according to the connection to the TV
+from which you obtained the EDID. Options are: HDMI, VGA, DVI
+
+
+METADATA FILE
+
+
+submitter
+	Name and email of the person who submitted the data.
+
+vendor
+	Brand/make of the display
+
+model
+	Full model information: number, product line name, etc
+
+notes (optional)
+	Notes from the submitter. Typically used to remind the submitter where
+	he found the display in case there is some followup.
+
+type
+	TV: Television
+	Panel: Integrated panel, e.g. in a laptop
+	Monitor: A full display unit intended for a PC
+
+technology
+	CRT:
+	LCD: includes displays branded as TFT, LED
+	Plasma
+
+overscan (optional)
+	Default overscan behaviour, when ran with image data at a HDTV resolution
+	(i.e. widescreen), over a HDMI or DVI connection, from a source that
+	requests underscan in the HDMI info frame.
+
+overscan_configurable (optional)
+	Is there a menu option that lets you enable/disable overscan?
+
+overscan_notes (optional)
+	Please use this field to go into more detail about the observed overscan
+	behaviour. If you found the configuration item in the menu, please describe
+	it (under which menu screen, what's the option name, what are the option
+	values?).
